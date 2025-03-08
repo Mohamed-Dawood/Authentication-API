@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 const PORT = process.env.PORT || 3001;
 
-app.use('/api/auth', userRouter);
+app.use('/api/v1/users', userRouter);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Hello World! From Backend' });
